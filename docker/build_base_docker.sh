@@ -1,0 +1,1 @@
+docker build -f Dockerfile.base -t base_docker_lab2 ..

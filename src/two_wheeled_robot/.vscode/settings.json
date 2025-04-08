@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/kulikov/lab_2024/install/cv_basics/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "",
+        "/home/kulikov/DATPROJ/bop_toolkit"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/kulikov/lab_2024/install/cv_basics/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "",
+        "/home/kulikov/DATPROJ/bop_toolkit"
+    ]
+}
