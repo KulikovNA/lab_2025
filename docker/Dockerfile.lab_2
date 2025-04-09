@@ -7,7 +7,6 @@ COPY ../runlaunch.sh /workspace/lab_2025
 
 # Делаем скрипт исполняемым
 RUN chmod +x /workspace/lab_2025/runlaunch.sh
-RUN pip3 install numpy==1.26.4
 
 # сборка и инициализация проекта
 RUN /bin/bash -c '. /opt/ros/humble/setup.bash; colcon build'

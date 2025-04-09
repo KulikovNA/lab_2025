@@ -21,8 +21,10 @@ RUN apt-get update && \
 # Install python3-pip and Python libraries
 RUN apt-get update && \
     apt-get install -y python3-pip && \
-    pip3 install cv_bridge numpy pyzmq zmq ultralytics && \
+    pip3 install cv_bridge pyzmq zmq ultralytics && \
     rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install numpy==1.26.4
 
 RUN apt-get update && \
     apt-get install -y ros-humble-gazebo-* && \
