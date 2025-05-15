@@ -1,0 +1,26 @@
+[0.601s] Invoking command in '/home/yuhan/lab_2025/src/cv_basics': PYTHONPATH=/home/yuhan/lab_2025/build/cv_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cv_basics build --build-base /home/yuhan/lab_2025/build/cv_basics/build install --record /home/yuhan/lab_2025/build/cv_basics/install.log --single-version-externally-managed install_data
+[0.826s] running egg_info
+[0.826s] writing ../../build/cv_basics/cv_basics.egg-info/PKG-INFO
+[0.826s] writing dependency_links to ../../build/cv_basics/cv_basics.egg-info/dependency_links.txt
+[0.827s] writing entry points to ../../build/cv_basics/cv_basics.egg-info/entry_points.txt
+[0.827s] writing requirements to ../../build/cv_basics/cv_basics.egg-info/requires.txt
+[0.827s] writing top-level names to ../../build/cv_basics/cv_basics.egg-info/top_level.txt
+[0.828s] reading manifest file '../../build/cv_basics/cv_basics.egg-info/SOURCES.txt'
+[0.829s] writing manifest file '../../build/cv_basics/cv_basics.egg-info/SOURCES.txt'
+[0.829s] running build
+[0.829s] running build_py
+[0.829s] copying cv_basics/inference_pytorch_background.py -> /home/yuhan/lab_2025/build/cv_basics/build/lib/cv_basics
+[0.830s] running install
+[0.830s] running install_lib
+[0.831s] copying /home/yuhan/lab_2025/build/cv_basics/build/lib/cv_basics/inference_pytorch_background.py -> /home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics
+[0.832s] byte-compiling /home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics/inference_pytorch_background.py to inference_pytorch_background.cpython-310.pyc
+[0.833s] running install_data
+[0.833s] running install_egg_info
+[0.835s] removing '/home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics-0.0.0-py3.10.egg-info' (and everything under it)
+[0.835s] Copying ../../build/cv_basics/cv_basics.egg-info to /home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics-0.0.0-py3.10.egg-info
+[0.835s] running install_scripts
+[0.856s] Installing inference_yolo_node script to /home/yuhan/lab_2025/install/cv_basics/lib/cv_basics
+[0.856s] Installing module_ROS script to /home/yuhan/lab_2025/install/cv_basics/lib/cv_basics
+[0.856s] Installing service script to /home/yuhan/lab_2025/install/cv_basics/lib/cv_basics
+[0.857s] writing list of installed files to '/home/yuhan/lab_2025/build/cv_basics/install.log'
+[0.879s] Invoked command in '/home/yuhan/lab_2025/src/cv_basics' returned '0': PYTHONPATH=/home/yuhan/lab_2025/build/cv_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cv_basics build --build-base /home/yuhan/lab_2025/build/cv_basics/build install --record /home/yuhan/lab_2025/build/cv_basics/install.log --single-version-externally-managed install_data
