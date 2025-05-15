@@ -1,0 +1,6 @@
+[0.279s] Invoking command in '/home/matthew/Downloads/lab_2025/build/two_wheeled_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matthew/turtlebot3_ws/install/turtlebot3_teleop:/home/matthew/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/matthew/Downloads/lab_2025/build/two_wheeled_robot -- -j12 -l12
+[0.289s] [0mCMake Error: The current CMakeCache.txt directory /home/matthew/Downloads/lab_2025/build/two_wheeled_robot/CMakeCache.txt is different than the directory /home/yuhan/lab_2025/build/two_wheeled_robot where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.307s] [0mCMake Error: The source directory "/home/yuhan/lab_2025/src/two_wheeled_robot" does not exist.
+[0.307s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.309s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.311s] Invoked command in '/home/matthew/Downloads/lab_2025/build/two_wheeled_robot' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/matthew/turtlebot3_ws/install/turtlebot3_teleop:/home/matthew/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/matthew/Downloads/lab_2025/build/two_wheeled_robot -- -j12 -l12
