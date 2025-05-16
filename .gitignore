@@ -1,0 +1,8 @@
+#ROS
+build/
+install/
+log/
+
+#YOLOV11 weights
+src/cv_basics/data/yolo11n.pt
+

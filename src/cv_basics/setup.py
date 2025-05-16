@@ -24,7 +24,8 @@ setup(
     entry_points={
         'console_scripts': ['module_ROS = cv_basics.module_ROS:main',
                             'service = cv_basic.service',
-                            'inference_yolo_node = cv_basics.inference_pytorch_background:main'
+                            'inference_yolo_node = cv_basics.inference_pytorch_background:main',
+                            'scan_subscriber = cv_basics.scan_subscriber:main'
         ],
     },
 )
