@@ -67,9 +67,10 @@ class ScanSubscriber(Node):
                     if diff < min_diff:
                         min_diff = diff
                         min_idx = idx
-                closest_angle = filtered_angles[min_idx]
-                closest_range = filtered_ranges[min_idx]
-                yolo_to_lidar.append((closest_angle, closest_range, class_id, confidence))
+                if min_diff < 0.05:  # Если разница меньше 0.02 радиан, то добавляем точку
+                    closest_angle = filtered_angles[min_idx]
+                    closest_range = filtered_ranges[min_idx]
+                    yolo_to_lidar.append((closest_angle, closest_range, class_id, confidence))
         # Удаляем старые маркеры
         if yolo_to_lidar:
             max_marker_count = 360
@@ -114,7 +115,7 @@ class ScanSubscriber(Node):
                 sphere_marker.color.r = 0.0
                 sphere_marker.color.g = 1.0
                 sphere_marker.color.b = 0.0
-                sphere_marker.lifetime.sec = 1
+                #sphere_marker.lifetime.sec = 1
                 marker_array.markers.append(sphere_marker)
                 # Текст с расстоянием и классом
                 text_marker = Marker()
@@ -133,7 +134,7 @@ class ScanSubscriber(Node):
                 text_marker.color.r = 1.0
                 text_marker.color.g = 1.0
                 text_marker.color.b = 1.0
-                text_marker.lifetime.sec = 1
+                #text_marker.lifetime.sec = 1
                 text_marker.text = f"{interp_range:.2f}m class: {class_name}"
                 marker_array.markers.append(text_marker)
         self.marker_publisher.publish(marker_array)

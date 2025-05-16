@@ -21,13 +21,13 @@ def generate_launch_description():
   robot_name_in_model = 'two_wheeled_robot'
   rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
   urdf_file_path = 'urdf/two_wheeled_robot_with_gazebo_plugins.urdf'
-  world_file_path = 'worlds/house.world'
+  world_file_path = 'worlds/car.world'
     
   # Pose where we want to spawn the robot
   spawn_x_val = '0.0'
-  spawn_y_val = '0.0'
+  spawn_y_val = '-10.0'
   spawn_z_val = '1.0'
-  spawn_yaw_val = '0.0'
+  spawn_yaw_val = '1.57'
 
   ############ You do not need to change anything below this line #############
   
