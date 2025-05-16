@@ -1,8 +1,9 @@
 #!/bin/bash
 
-xhost +local:
+xhost +local:root
 
 docker run -it --rm \
+    --network host \
     --env "QT_X11_NO_MITSHM=1" \
     --env DISPLAY=${DISPLAY} \
     --env LIBGL_ALWAYS_SOFTWARE=1 \
