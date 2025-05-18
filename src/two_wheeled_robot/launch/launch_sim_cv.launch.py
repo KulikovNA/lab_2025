@@ -25,10 +25,21 @@ def generate_launch_description():
         package='cv_basics',
         executable='inference_yolo_node',
         name='inference_yolo_node',
-        output='screen'
+        output='screen',
+        parameters=[{'use_sim_time': True}]
+    )
+
+    # Запускаем ноду scan_subscriber из пакета cv_basics
+    scan_subscriber_node = Node(
+        package='cv_basics',
+        executable='scan_subscriber',
+        name='scan_subscriber',
+        output='screen',
+        parameters=[{'use_sim_time': True}]
     )
 
     return LaunchDescription([
         urdf_launch,
-        inference_yolo_node
+        inference_yolo_node,
+        scan_subscriber_node
     ])
