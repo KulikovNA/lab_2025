@@ -1,0 +1,5 @@
+  File "/home/yuhan/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics/inference_pytorch_background.py", line 100
+    def
+       ^
+SyntaxError: invalid syntax
+

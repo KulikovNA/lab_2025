@@ -1,0 +1,26 @@
+[0.661s] Invoking command in '/home/matthew/Downloads/lab_2025/src/cv_basics': PYTHONPATH=/home/matthew/Downloads/lab_2025/build/cv_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/Downloads/lab_2025/install/cv_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cv_basics build --build-base /home/matthew/Downloads/lab_2025/build/cv_basics/build install --record /home/matthew/Downloads/lab_2025/build/cv_basics/install.log --single-version-externally-managed install_data
+[0.892s] running egg_info
+[0.892s] writing ../../build/cv_basics/cv_basics.egg-info/PKG-INFO
+[0.892s] writing dependency_links to ../../build/cv_basics/cv_basics.egg-info/dependency_links.txt
+[0.893s] writing entry points to ../../build/cv_basics/cv_basics.egg-info/entry_points.txt
+[0.893s] writing requirements to ../../build/cv_basics/cv_basics.egg-info/requires.txt
+[0.893s] writing top-level names to ../../build/cv_basics/cv_basics.egg-info/top_level.txt
+[0.894s] reading manifest file '../../build/cv_basics/cv_basics.egg-info/SOURCES.txt'
+[0.895s] writing manifest file '../../build/cv_basics/cv_basics.egg-info/SOURCES.txt'
+[0.896s] running build
+[0.896s] running build_py
+[0.896s] copying cv_basics/inference_pytorch_background.py -> /home/matthew/Downloads/lab_2025/build/cv_basics/build/lib/cv_basics
+[0.896s] running install
+[0.896s] running install_lib
+[0.897s] copying /home/matthew/Downloads/lab_2025/build/cv_basics/build/lib/cv_basics/inference_pytorch_background.py -> /home/matthew/Downloads/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics
+[0.898s] byte-compiling /home/matthew/Downloads/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics/inference_pytorch_background.py to inference_pytorch_background.cpython-310.pyc
+[0.899s] running install_data
+[0.899s] running install_egg_info
+[0.901s] removing '/home/matthew/Downloads/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics-0.0.0-py3.10.egg-info' (and everything under it)
+[0.902s] Copying ../../build/cv_basics/cv_basics.egg-info to /home/matthew/Downloads/lab_2025/install/cv_basics/lib/python3.10/site-packages/cv_basics-0.0.0-py3.10.egg-info
+[0.902s] running install_scripts
+[0.926s] Installing inference_yolo_node script to /home/matthew/Downloads/lab_2025/install/cv_basics/lib/cv_basics
+[0.926s] Installing module_ROS script to /home/matthew/Downloads/lab_2025/install/cv_basics/lib/cv_basics
+[0.926s] Installing service script to /home/matthew/Downloads/lab_2025/install/cv_basics/lib/cv_basics
+[0.926s] writing list of installed files to '/home/matthew/Downloads/lab_2025/build/cv_basics/install.log'
+[0.960s] Invoked command in '/home/matthew/Downloads/lab_2025/src/cv_basics' returned '0': PYTHONPATH=/home/matthew/Downloads/lab_2025/build/cv_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/matthew/Downloads/lab_2025/install/cv_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cv_basics build --build-base /home/matthew/Downloads/lab_2025/build/cv_basics/build install --record /home/matthew/Downloads/lab_2025/build/cv_basics/install.log --single-version-externally-managed install_data
