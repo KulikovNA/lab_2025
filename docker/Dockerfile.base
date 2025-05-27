@@ -13,9 +13,14 @@ RUN apt-get update && \
       ros-humble-graph-msgs \
       ros-humble-rviz-visual-tools \
       ros-humble-xacro \
+      ros-humble-teleop-twist-keyboard \
       ros-humble-robot-state-publisher \
       ros-humble-joint-state-publisher \
       ros-humble-joint-state-publisher-gui && \
+      ros-humble-gazebo-ros-pkgs \
+      ros-humble-gazebo-plugins \
+      ros-humble-controller-manager \
+      ros-humble-diff-drive-controller && \
     rm -rf /var/lib/apt/lists/*
 
 # Install python3-pip and Python libraries
