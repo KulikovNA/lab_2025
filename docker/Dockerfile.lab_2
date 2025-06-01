@@ -5,6 +5,10 @@ WORKDIR /workspace/lab_2025
 COPY ../src /workspace/lab_2025/src
 COPY ../runlaunch.sh /workspace/lab_2025
 
+RUN cd /workspace/lab_2025/src/cv_basics/data && \
+    yolo export model=yolo11n.pt format=onnx imgsz=640 opset=12 simplify=True && \
+    rm -rf /root/.cache/ultralytics
+
 # Делаем скрипт исполняемым
 RUN chmod +x /workspace/lab_2025/runlaunch.sh
 
