@@ -1,0 +1,217 @@
+[0.413s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.413s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x79f26f5721d0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x79f26f571ba0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x79f26f571ba0>>, mixin_verb=('build',))
+[3.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[3.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[3.242s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[3.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[3.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[3.243s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[3.243s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/greyflon/lab_2025'
+[3.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[3.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[3.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[3.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[3.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[3.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[3.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extensions ['ignore', 'ignore_ament_install']
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'ignore'
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'ignore_ament_install'
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extensions ['colcon_pkg']
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'colcon_pkg'
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extensions ['colcon_meta']
+[3.271s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'colcon_meta'
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extensions ['ros']
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'ros'
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extensions ['cmake', 'python']
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'cmake'
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'python'
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extensions ['python_setup_py']
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(docker) by extension 'python_setup_py'
+[3.272s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extensions ['ignore', 'ignore_ament_install']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'ignore'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'ignore_ament_install'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extensions ['colcon_pkg']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'colcon_pkg'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extensions ['colcon_meta']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'colcon_meta'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extensions ['ros']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'ros'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extensions ['cmake', 'python']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'cmake'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'python'
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extensions ['python_setup_py']
+[3.273s] Level 1:colcon.colcon_core.package_identification:_identify(example) by extension 'python_setup_py'
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[3.274s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extensions ['ignore', 'ignore_ament_install']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extension 'ignore'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extension 'ignore_ament_install'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extensions ['colcon_pkg']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extension 'colcon_pkg'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extensions ['colcon_meta']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extension 'colcon_meta'
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extensions ['ros']
+[3.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/cv_basics) by extension 'ros'
+[3.286s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cv_basics' with type 'ros.ament_python' and name 'cv_basics'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extensions ['ignore', 'ignore_ament_install']
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extension 'ignore'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extension 'ignore_ament_install'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extensions ['colcon_pkg']
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extension 'colcon_pkg'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extensions ['colcon_meta']
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extension 'colcon_meta'
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extensions ['ros']
+[3.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/two_wheeled_robot) by extension 'ros'
+[3.299s] DEBUG:colcon.colcon_core.package_identification:Package 'src/two_wheeled_robot' with type 'ros.ament_cmake' and name 'two_wheeled_robot'
+[3.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[3.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[3.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[3.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[3.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[3.481s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[3.481s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[3.487s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/greyflon/lab_2025/install
+[3.492s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 377 installed packages in /opt/ros/humble
+[3.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'cmake_args' from command line to 'None'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'cmake_target' from command line to 'None'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'cmake_clean_cache' from command line to 'False'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'cmake_clean_first' from command line to 'False'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'cmake_force_configure' from command line to 'False'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'ament_cmake_args' from command line to 'None'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'catkin_cmake_args' from command line to 'None'
+[3.570s] Level 5:colcon.colcon_core.verb:set package 'cv_basics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.570s] DEBUG:colcon.colcon_core.verb:Building package 'cv_basics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/greyflon/lab_2025/build/cv_basics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/greyflon/lab_2025/install/cv_basics', 'merge_install': False, 'path': '/home/greyflon/lab_2025/src/cv_basics', 'symlink_install': False, 'test_result_base': None}
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'cmake_args' from command line to 'None'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'cmake_target' from command line to 'None'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'cmake_clean_first' from command line to 'False'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'cmake_force_configure' from command line to 'False'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'ament_cmake_args' from command line to 'None'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[3.571s] Level 5:colcon.colcon_core.verb:set package 'two_wheeled_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[3.571s] DEBUG:colcon.colcon_core.verb:Building package 'two_wheeled_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/greyflon/lab_2025/build/two_wheeled_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/greyflon/lab_2025/install/two_wheeled_robot', 'merge_install': False, 'path': '/home/greyflon/lab_2025/src/two_wheeled_robot', 'symlink_install': False, 'test_result_base': None}
+[3.571s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.572s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.572s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/greyflon/lab_2025/src/cv_basics' with build type 'ament_python'
+[3.573s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_basics', 'ament_prefix_path')
+[3.577s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/hook/ament_prefix_path.ps1'
+[3.588s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/hook/ament_prefix_path.dsv'
+[3.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/hook/ament_prefix_path.sh'
+[3.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.596s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.608s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/greyflon/lab_2025/src/two_wheeled_robot' with build type 'ament_cmake'
+[3.609s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/greyflon/lab_2025/src/two_wheeled_robot'
+[3.609s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.609s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.892s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/greyflon/lab_2025/src/cv_basics'
+[3.893s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.893s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.918s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/greyflon/lab_2025/build/two_wheeled_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/greyflon/lab_2025/install/cv_basics:/opt/ros/humble /usr/bin/cmake --build /home/greyflon/lab_2025/build/two_wheeled_robot -- -j12 -l12
+[4.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/greyflon/lab_2025/build/two_wheeled_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/greyflon/lab_2025/install/cv_basics:/opt/ros/humble /usr/bin/cmake --build /home/greyflon/lab_2025/build/two_wheeled_robot -- -j12 -l12
+[4.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/greyflon/lab_2025/build/two_wheeled_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/greyflon/lab_2025/install/cv_basics:/opt/ros/humble /usr/bin/cmake --install /home/greyflon/lab_2025/build/two_wheeled_robot
+[5.289s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/greyflon/lab_2025/src/cv_basics': PYTHONPATH=/home/greyflon/lab_2025/build/cv_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/greyflon/lab_2025/install/cv_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cv_basics build --build-base /home/greyflon/lab_2025/build/cv_basics/build install --record /home/greyflon/lab_2025/build/cv_basics/install.log --single-version-externally-managed install_data
+[5.485s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(two_wheeled_robot)
+[5.486s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/greyflon/lab_2025/build/two_wheeled_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/greyflon/lab_2025/install/cv_basics:/opt/ros/humble /usr/bin/cmake --install /home/greyflon/lab_2025/build/two_wheeled_robot
+[5.494s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot' for CMake module files
+[5.495s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot' for CMake config files
+[5.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('two_wheeled_robot', 'cmake_prefix_path')
+[5.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/hook/cmake_prefix_path.ps1'
+[5.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/hook/cmake_prefix_path.dsv'
+[5.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/hook/cmake_prefix_path.sh'
+[5.520s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/bin'
+[5.520s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/lib/pkgconfig/two_wheeled_robot.pc'
+[5.520s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/lib/python3.10/site-packages'
+[5.520s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/bin'
+[5.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.ps1'
+[5.522s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.dsv'
+[5.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.sh'
+[5.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.bash'
+[5.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.zsh'
+[5.548s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/greyflon/lab_2025/install/two_wheeled_robot/share/colcon-core/packages/two_wheeled_robot)
+[5.549s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(two_wheeled_robot)
+[5.549s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot' for CMake module files
+[5.550s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot' for CMake config files
+[5.579s] Level 1:colcon.colcon_core.shell:create_environment_hook('two_wheeled_robot', 'cmake_prefix_path')
+[5.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/hook/cmake_prefix_path.ps1'
+[5.579s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/hook/cmake_prefix_path.dsv'
+[5.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/hook/cmake_prefix_path.sh'
+[5.580s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/bin'
+[5.580s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/lib/pkgconfig/two_wheeled_robot.pc'
+[5.581s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/lib/python3.10/site-packages'
+[5.581s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/two_wheeled_robot/bin'
+[5.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.ps1'
+[5.582s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.dsv'
+[5.582s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.sh'
+[5.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.bash'
+[5.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/two_wheeled_robot/share/two_wheeled_robot/package.zsh'
+[5.583s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/greyflon/lab_2025/install/two_wheeled_robot/share/colcon-core/packages/two_wheeled_robot)
+[5.639s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics' for CMake module files
+[5.640s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/greyflon/lab_2025/src/cv_basics' returned '0': PYTHONPATH=/home/greyflon/lab_2025/build/cv_basics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/greyflon/lab_2025/install/cv_basics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cv_basics build --build-base /home/greyflon/lab_2025/build/cv_basics/build install --record /home/greyflon/lab_2025/build/cv_basics/install.log --single-version-externally-managed install_data
+[5.641s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics' for CMake config files
+[5.643s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics/lib'
+[5.643s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics/bin'
+[5.644s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics/lib/pkgconfig/cv_basics.pc'
+[5.644s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics/lib/python3.10/site-packages'
+[5.644s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_basics', 'pythonpath')
+[5.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/hook/pythonpath.ps1'
+[5.646s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/hook/pythonpath.dsv'
+[5.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/hook/pythonpath.sh'
+[5.648s] Level 1:colcon.colcon_core.environment:checking '/home/greyflon/lab_2025/install/cv_basics/bin'
+[5.648s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_basics)
+[5.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/package.ps1'
+[5.651s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/package.dsv'
+[5.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/package.sh'
+[5.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/package.bash'
+[5.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/greyflon/lab_2025/install/cv_basics/share/cv_basics/package.zsh'
+[5.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/greyflon/lab_2025/install/cv_basics/share/colcon-core/packages/cv_basics)
+[5.655s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.656s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.656s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.656s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.672s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.673s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.673s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.718s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.719s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/greyflon/lab_2025/install/local_setup.ps1'
+[5.722s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/greyflon/lab_2025/install/_local_setup_util_ps1.py'
+[5.726s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/greyflon/lab_2025/install/setup.ps1'
+[5.728s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/greyflon/lab_2025/install/local_setup.sh'
+[5.730s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/greyflon/lab_2025/install/_local_setup_util_sh.py'
+[5.732s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/greyflon/lab_2025/install/setup.sh'
+[5.735s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/greyflon/lab_2025/install/local_setup.bash'
+[5.737s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/greyflon/lab_2025/install/setup.bash'
+[5.739s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/greyflon/lab_2025/install/local_setup.zsh'
+[5.741s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/greyflon/lab_2025/install/setup.zsh'
