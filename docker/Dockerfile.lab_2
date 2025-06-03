@@ -8,6 +8,13 @@ COPY ../runlaunch.sh /workspace/lab_2025
 # Делаем скрипт исполняемым
 RUN chmod +x /workspace/lab_2025/runlaunch.sh
 
+RUN pip install filterpy && \
+    git clone https://github.com/abewley/sort.git && \
+    cp sort/sort.py /workspace/lab_2025/src/cv_basics/cv_basics/ && \
+    rm -rf sort
+
+RUN pip install scikit-image
+
 # сборка и инициализация проекта
 RUN /bin/bash -c '. /opt/ros/humble/setup.bash; colcon build'
 
