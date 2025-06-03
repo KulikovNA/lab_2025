@@ -28,7 +28,15 @@ def generate_launch_description():
         output='screen'
     )
 
+    object_tracker_node = Node(
+        package='cv_basics',  # Или имя вашего пакета
+        executable='object_tracker_node',
+        name='object_tracker',
+        output='screen'
+    )
+
     return LaunchDescription([
         urdf_launch,
-        inference_yolo_node
+        inference_yolo_node,
+        object_tracker_node
     ])
