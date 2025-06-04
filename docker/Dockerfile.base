@@ -1,24 +1,28 @@
 FROM osrf/ros:humble-desktop-full
 
-# nvidia-container-runtime
-ENV NVIDIA_VISIBLE_DEVICES \
-    ${NVIDIA_VISIBLE_DEVICES:-all}
-ENV NVIDIA_DRIVER_CAPABILITIES \
-   ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
-
 # install ros package
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y\
+      ros-humble-rviz2 \
+      ros-humble-rviz-common \
+      ros-humble-rviz-default-plugins \
       ros-humble-graph-msgs \
       ros-humble-rviz-visual-tools \
       ros-humble-xacro \
       ros-humble-robot-state-publisher \
       ros-humble-joint-state-publisher \
-      ros-humble-joint-state-publisher-gui && \
+      ros-humble-joint-state-publisher-gui \
+      ros-humble-rmw-cyclonedds-cpp \
+      ros-humble-navigation2 \
+      ros-humble-nav2-bringup \
+      ros-humble-nav2-msgs \
+      ros-humble-nav2-rviz-plugins \
+      ros-humble-turtlebot3* \
+      ros-humble-slam-toolbox && \
     rm -rf /var/lib/apt/lists/*
 
-# Install python3-pip and Python libraries
+# Install python3-pip and Python librariesW
 RUN apt-get update && \
     apt-get install -y python3-pip && \
     pip3 install cv_bridge pyzmq zmq ultralytics && \
@@ -29,5 +33,7 @@ RUN pip3 install numpy==1.26.4
 RUN apt-get update && \
     apt-get install -y ros-humble-gazebo-* && \
     rm -rf /var/lib/apt/lists/*
+
+RUN apt-get install ros-humble-rmw-cyclonedds-cpp
 
 ENTRYPOINT [ "/bin/bash"]
