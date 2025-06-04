@@ -21,7 +21,7 @@ RUN apt-get update && \
 # Install python3-pip and Python libraries
 RUN apt-get update && \
     apt-get install -y python3-pip && \
-    pip3 install cv_bridge pyzmq zmq ultralytics && \
+    pip3 install cv_bridge opencv-python-headless pyzmq zmq vision_msgs onnxruntime ultralytics && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install numpy==1.26.4
