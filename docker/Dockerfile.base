@@ -1,11 +1,9 @@
 FROM osrf/ros:humble-desktop-full
-
 # nvidia-container-runtime
 ENV NVIDIA_VISIBLE_DEVICES \
     ${NVIDIA_VISIBLE_DEVICES:-all}
 ENV NVIDIA_DRIVER_CAPABILITIES \
    ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
-
 # install ros package
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -17,17 +15,15 @@ RUN apt-get update && \
       ros-humble-joint-state-publisher \
       ros-humble-joint-state-publisher-gui && \
     rm -rf /var/lib/apt/lists/*
-
 # Install python3-pip and Python libraries
 RUN apt-get update && \
     apt-get install -y python3-pip && \
     pip3 install cv_bridge pyzmq zmq ultralytics && \
+    pip3 install cv_bridge opencv-python-headless pyzmq zmq vision_msgs onnxruntime ultralytics && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install numpy==1.26.4
-
 RUN apt-get update && \
     apt-get install -y ros-humble-gazebo-* && \
     rm -rf /var/lib/apt/lists/*
-
 ENTRYPOINT [ "/bin/bash"]
