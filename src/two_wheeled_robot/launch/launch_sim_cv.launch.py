@@ -27,8 +27,17 @@ def generate_launch_description():
         name='inference_yolo_node',
         output='screen'
     )
+    
+    # Запускаем ноду follow из пакета cv_basics
+    follow_node = Node(
+        package='cv_basics',
+        executable='follow_node',
+        name='follow_node',
+        output='screen'
+    )
 
     return LaunchDescription([
         urdf_launch,
-        inference_yolo_node
+        inference_yolo_node,
+        follow_node
     ])
