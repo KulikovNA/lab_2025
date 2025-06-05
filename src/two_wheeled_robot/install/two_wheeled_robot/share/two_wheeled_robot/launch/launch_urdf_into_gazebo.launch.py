@@ -21,13 +21,13 @@ def generate_launch_description():
   robot_name_in_model = 'two_wheeled_robot'
   rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
   urdf_file_path = 'urdf/two_wheeled_robot_with_gazebo_plugins.urdf'
-  world_file_path = 'worlds/farm.world'
+  world_file_path = 'worlds/cafe.world'
     
   # Pose where we want to spawn the robot
-  spawn_x_val = '10.0'
-  spawn_y_val = '0.0'
-  spawn_z_val = '0.0'
-  spawn_yaw_val = '-1.57'
+  spawn_x_val = '0.0'
+  spawn_y_val = '-10.0'
+  spawn_z_val = '1.0'
+  spawn_yaw_val = '1.57'
 
   ############ You do not need to change anything below this line #############
   
@@ -130,7 +130,7 @@ def generate_launch_description():
     output='screen',
     arguments=['-d', rviz_config_file])
 
-  # Start Gazebo server
+  """# Start Gazebo server
   start_gazebo_server_cmd = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')),
     condition=IfCondition(use_simulator),
@@ -139,8 +139,19 @@ def generate_launch_description():
   # Start Gazebo client    
   start_gazebo_client_cmd = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')),
-    condition=IfCondition(PythonExpression([use_simulator, ' and not ', headless])))
+    condition=IfCondition(PythonExpression([use_simulator, ' and not ', headless])))"""
+  start_gazebo_server_cmd = IncludeLaunchDescription(
+    PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')),
+    condition=IfCondition(use_simulator),
+    launch_arguments={'world': world, 'verbose': 'true'}.items()
+  )
 
+  # Start Gazebo client    
+  start_gazebo_client_cmd = IncludeLaunchDescription(
+    PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')),
+    condition=IfCondition(PythonExpression([use_simulator, ' and not ', headless])),
+    launch_arguments={'verbose': 'true'}.items()
+  )
   # Launch the robot
   spawn_entity_cmd = Node(
     package='gazebo_ros', 
