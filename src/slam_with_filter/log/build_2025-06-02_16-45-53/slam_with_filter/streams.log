@@ -1,0 +1,21 @@
+[0.288s] Invoking command in '/workspace/lab_2025/src/slam_with_filter': PYTHONPATH=/workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/slam_with_filter build --build-base /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build install --record /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/install.log --single-version-externally-managed install_data
+[0.394s] running egg_info
+[0.395s] writing build/slam_with_filter/slam_with_filter.egg-info/PKG-INFO
+[0.395s] writing dependency_links to build/slam_with_filter/slam_with_filter.egg-info/dependency_links.txt
+[0.395s] writing entry points to build/slam_with_filter/slam_with_filter.egg-info/entry_points.txt
+[0.395s] writing requirements to build/slam_with_filter/slam_with_filter.egg-info/requires.txt
+[0.395s] writing top-level names to build/slam_with_filter/slam_with_filter.egg-info/top_level.txt
+[0.396s] reading manifest file 'build/slam_with_filter/slam_with_filter.egg-info/SOURCES.txt'
+[0.396s] writing manifest file 'build/slam_with_filter/slam_with_filter.egg-info/SOURCES.txt'
+[0.396s] running build
+[0.396s] running build_py
+[0.396s] running install
+[0.397s] running install_lib
+[0.397s] running install_data
+[0.397s] running install_egg_info
+[0.398s] removing '/workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter-0.0.0-py3.10.egg-info' (and everything under it)
+[0.398s] Copying build/slam_with_filter/slam_with_filter.egg-info to /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter-0.0.0-py3.10.egg-info
+[0.399s] running install_scripts
+[0.409s] Installing camera_rotator script to /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/slam_with_filter
+[0.409s] writing list of installed files to '/workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/install.log'
+[0.422s] Invoked command in '/workspace/lab_2025/src/slam_with_filter' returned '0': PYTHONPATH=/workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/slam_with_filter build --build-base /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build install --record /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/install.log --single-version-externally-managed install_data
