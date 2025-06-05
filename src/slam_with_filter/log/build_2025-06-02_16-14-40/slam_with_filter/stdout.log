@@ -1,0 +1,40 @@
+running egg_info
+creating build/slam_with_filter/slam_with_filter.egg-info
+writing build/slam_with_filter/slam_with_filter.egg-info/PKG-INFO
+writing dependency_links to build/slam_with_filter/slam_with_filter.egg-info/dependency_links.txt
+writing entry points to build/slam_with_filter/slam_with_filter.egg-info/entry_points.txt
+writing requirements to build/slam_with_filter/slam_with_filter.egg-info/requires.txt
+writing top-level names to build/slam_with_filter/slam_with_filter.egg-info/top_level.txt
+writing manifest file 'build/slam_with_filter/slam_with_filter.egg-info/SOURCES.txt'
+reading manifest file 'build/slam_with_filter/slam_with_filter.egg-info/SOURCES.txt'
+writing manifest file 'build/slam_with_filter/slam_with_filter.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build
+creating /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib
+creating /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter
+copying slam_with_filter/__init__.py -> /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter
+copying slam_with_filter/inference.py -> /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter
+copying slam_with_filter/camera_rotator.py -> /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter
+running install
+running install_lib
+creating /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter
+copying /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter/__init__.py -> /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter
+copying /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter/inference.py -> /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter
+copying /workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/build/lib/slam_with_filter/camera_rotator.py -> /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter
+byte-compiling /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter/__init__.py to __init__.cpython-310.pyc
+byte-compiling /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter/inference.py to inference.cpython-310.pyc
+byte-compiling /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter/camera_rotator.py to camera_rotator.cpython-310.pyc
+running install_data
+creating /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/ament_index
+creating /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/ament_index/resource_index
+creating /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/ament_index/resource_index/packages
+copying resource/slam_with_filter -> /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/slam_with_filter
+creating /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/slam_with_filter/launch
+copying launch/slam.launch.py -> /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/share/slam_with_filter/launch
+running install_egg_info
+Copying build/slam_with_filter/slam_with_filter.egg-info to /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/python3.10/site-packages/slam_with_filter-0.0.0-py3.10.egg-info
+running install_scripts
+Installing camera_rotator script to /workspace/lab_2025/src/slam_with_filter/install/slam_with_filter/lib/slam_with_filter
+writing list of installed files to '/workspace/lab_2025/src/slam_with_filter/build/slam_with_filter/install.log'

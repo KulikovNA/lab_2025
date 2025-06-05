@@ -250,6 +250,7 @@
           <far>100.0</far>
         </clip>
       </camera>
+
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <ros>
           <remapping>~/out:=camera/image_raw</remapping>
@@ -258,6 +259,12 @@
         <frame_name>camera_link</frame_name>
       </plugin>
     </sensor>
+
+    <plugin name="camera_joint_position_controller" filename="libgazebo_ros_joint_position_controller.so">
+      <joint_name>camera_joint</joint_name>
+      <command_topic>camera_joint_position</command_topic>
+    </plugin>
+
   </link>
 
   
@@ -386,7 +393,7 @@
     <pose>0 0 0 0 0 0</pose>
   </joint>
 
-  <joint name="camera_joint" type="fixed">
+  <joint name="camera_joint" type="continuous">
     <parent>lidar_link</parent>
     <child>camera_link</child>
     <pose>0 0 0 0 0 0</pose>
