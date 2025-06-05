@@ -1,8 +1,8 @@
-# Install script for directory: /home/kulikov/lab_2024/src/two_wheeled_robot
+# Install script for directory: /workspace/lab_2025/src/two_wheeled_robot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kulikov/lab_2024/src/two_wheeled_robot/install/two_wheeled_robot")
+  set(CMAKE_INSTALL_PREFIX "/workspace/lab_2025/src/two_wheeled_robot/install/two_wheeled_robot")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,26 +44,26 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE DIRECTORY FILES
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/config"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/launch"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/maps"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/media"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/meshes"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/models"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/params"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/rviz"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/scripts"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/urdf"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/worlds"
+    "/workspace/lab_2025/src/two_wheeled_robot/config"
+    "/workspace/lab_2025/src/two_wheeled_robot/launch"
+    "/workspace/lab_2025/src/two_wheeled_robot/maps"
+    "/workspace/lab_2025/src/two_wheeled_robot/media"
+    "/workspace/lab_2025/src/two_wheeled_robot/meshes"
+    "/workspace/lab_2025/src/two_wheeled_robot/models"
+    "/workspace/lab_2025/src/two_wheeled_robot/params"
+    "/workspace/lab_2025/src/two_wheeled_robot/rviz"
+    "/workspace/lab_2025/src/two_wheeled_robot/scripts"
+    "/workspace/lab_2025/src/two_wheeled_robot/urdf"
+    "/workspace/lab_2025/src/two_wheeled_robot/worlds"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/two_wheeled_robot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/two_wheeled_robot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/two_wheeled_robot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/two_wheeled_robot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -71,7 +71,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot/environment" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot/environment" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,42 +79,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot/environment" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot/environment" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_index/share/ament_index/resource_index/packages/two_wheeled_robot")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_index/share/ament_index/resource_index/packages/two_wheeled_robot")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot/cmake" TYPE FILE FILES
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_core/two_wheeled_robotConfig.cmake"
-    "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_core/two_wheeled_robotConfig-version.cmake"
+    "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_core/two_wheeled_robotConfig.cmake"
+    "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_core/two_wheeled_robotConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/home/kulikov/lab_2024/src/two_wheeled_robot/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/two_wheeled_robot" TYPE FILE FILES "/workspace/lab_2025/src/two_wheeled_robot/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -125,5 +125,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

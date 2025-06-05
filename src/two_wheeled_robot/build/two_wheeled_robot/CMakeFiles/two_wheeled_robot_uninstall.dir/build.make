@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kulikov/lab_2024/src/two_wheeled_robot
+CMAKE_SOURCE_DIR = /workspace/lab_2025/src/two_wheeled_robot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot
+CMAKE_BINARY_DIR = /workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot
 
 # Utility rule file for two_wheeled_robot_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/two_wheeled_robot_uninstall.dir/compiler_depend.make
 include CMakeFiles/two_wheeled_robot_uninstall.dir/progress.make
 
 CMakeFiles/two_wheeled_robot_uninstall:
-	/usr/bin/cmake -P /home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 two_wheeled_robot_uninstall: CMakeFiles/two_wheeled_robot_uninstall
 two_wheeled_robot_uninstall: CMakeFiles/two_wheeled_robot_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/two_wheeled_robot_uninstall.dir/clean:
 .PHONY : CMakeFiles/two_wheeled_robot_uninstall.dir/clean
 
 CMakeFiles/two_wheeled_robot_uninstall.dir/depend:
-	cd /home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kulikov/lab_2024/src/two_wheeled_robot /home/kulikov/lab_2024/src/two_wheeled_robot /home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot /home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot /home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/CMakeFiles/two_wheeled_robot_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/lab_2025/src/two_wheeled_robot /workspace/lab_2025/src/two_wheeled_robot /workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot /workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot /workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/CMakeFiles/two_wheeled_robot_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/two_wheeled_robot_uninstall.dir/depend
 

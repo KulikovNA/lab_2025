@@ -1,0 +1,3 @@
+[console_scripts]
+camera_rotator = slam_with_filter.camera_rotator:main
+
