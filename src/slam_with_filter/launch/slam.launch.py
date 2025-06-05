@@ -47,7 +47,6 @@ def generate_launch_description():
                     output='screen')
                 ])
 
-        # Запуск ноды для вращения камеры
         camera_rotator = Node(
             package="slam_with_filter",
             executable="camera_rotator",
@@ -55,12 +54,27 @@ def generate_launch_description():
             output="screen"
         )
 
+        inference_node = Node(
+            package="slam_with_filter",
+            executable="segmentation_filter",
+            name="segmentation_filter",
+            output="screen"
+        )
+
+        lidar_node = Node(
+            package="slam_with_filter",
+            executable="lidar_filtered",
+            name="lidar_filter",
+            output="screen"
+        )
 
         return LaunchDescription([
             urdf_launch,
             ros2_control_node,
             delay_spawner,
-            camera_rotator
+            camera_rotator,
+            inference_node,
+            lidar_node
             ])
     except Exception as e:
         print("Ошибка при запуске launch-файла:", e)

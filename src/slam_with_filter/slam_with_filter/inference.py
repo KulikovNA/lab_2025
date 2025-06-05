@@ -1,110 +1,106 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
-import torch
-from torchvision import transforms
+import os
+from ultralytics import YOLO
+from ament_index_python.packages import get_package_share_directory
 
-class SegmentationNode(Node):
+class SegmentationFilterNode(Node):
     def __init__(self):
-        super().__init__('segmentation_node')
+        super().__init__('segmentation_filter')
 
-        # Параметры
-        self.declare_parameter('model_path', '/path/to/your/model.pth')
-        self.declare_parameter('input_topic', '/camera/image_raw')
-        self.declare_parameter('output_topic', '/segmentation/mask')
-        self.declare_parameter('device', 'cuda' if torch.cuda.is_available() else 'cpu')
+        package_share_directory = get_package_share_directory('slam_with_filter')
+        weights_path = os.path.join(package_share_directory, 'data', 'yolo11n-seg.pt')
 
-        # Загрузка параметров
-        model_path = self.get_parameter('model_path').get_parameter_value().string_value
-        input_topic = self.get_parameter('input_topic').get_parameter_value().string_value
-        output_topic = self.get_parameter('output_topic').get_parameter_value().string_value
-        self.device = self.get_parameter('device').get_parameter_value().string_value
-
-        # Инициализация модели (замените на вашу модель)
-        self.model = self.load_model(model_path)
-        self.model.eval()
-        self.model.to(self.device)
-
-        # CvBridge для преобразования ROS Image <-> OpenCV
-        self.bridge = CvBridge()
-
-        # Подписка на входной топик с изображениями
-        self.subscription = self.create_subscription(
-            Image,
-            input_topic,
-            self.image_callback,
-            10
-        )
-
-        # Публикация результата сегментации
-        self.publisher = self.create_publisher(
-            Image,
-            output_topic,
-            10
-        )
-
-        # Преобразование для входных данных модели
-        self.transform = transforms.Compose([
-            transforms.ToTensor(),
-            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-        ])
-
-        self.get_logger().info('Segmentation node initialized')
-
-    def load_model(self, model_path):
-        # Загрузка модели (пример для PyTorch, замените на вашу архитектуру)
-        model = torch.load(model_path, map_location=self.device)
-        return model
-
-    def preprocess_image(self, cv_image):
-        # Преобразование изображения для модели
-        img = cv2.cvtColor(cv_image, cv2.COLOR_BGR2RGB)
-        img = cv2.resize(img, (512, 512))  # Укажите нужный размер
-        img_tensor = self.transform(img).unsqueeze(0).to(self.device)
-        return img_tensor
-
-    def postprocess_mask(self, output):
-        # Постобработка выхода модели (предполагается, что модель возвращает logits)
-        output = torch.softmax(output, dim=1)
-        mask = torch.argmax(output, dim=1).squeeze().cpu().numpy()
-        mask = mask.astype(np.uint8) * 255  # Для визуализации
-        mask = cv2.resize(mask, (640, 480))  # Вернуть к исходному размеру
-        return mask
-
-    def image_callback(self, msg):
         try:
-            # Преобразование ROS Image в OpenCV
-            cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-
-            # Предобработка изображения
-            input_tensor = self.preprocess_image(cv_image)
-
-            # Инференс модели
-            with torch.no_grad():
-                output = self.model(input_tensor)
-
-            # Постобработка маски
-            mask = self.postprocess_mask(output)
-
-            # Преобразование маски в ROS Image
-            mask_msg = self.bridge.cv2_to_imgmsg(mask, encoding='mono8')
-            mask_msg.header = msg.header  # Сохраняем заголовок для синхронизации
-
-            # Публикация результата
-            self.publisher.publish(mask_msg)
-            self.get_logger().info('Published segmentation mask')
-
+            self.model = YOLO(weights_path)
+            self.model.model.to('cpu')  # Используем CPU (можно изменить на GPU, если доступно)
+            self.get_logger().info(f"Loaded YOLO11n-seg model from {weights_path}")
         except Exception as e:
-            self.get_logger().error(f'Error processing image: {str(e)}')
+            self.get_logger().error(f"Failed to load YOLO model: {str(e)}")
+            return
+
+
+        self.publisher_ = self.create_publisher(Image, 'filtered_image', 10)
+
+        self.debug_publisher_ = self.create_publisher(Image, 'segmented_image', 10)
+
+        self.subscription = self.create_subscription(
+            Image, '/camera/image_raw', self.listener_callback, 10)
+
+
+        self.timer = self.create_timer(0.1, self.timer_callback)
+
+
+        self.br = CvBridge()
+
+        self.cv_image = None
+
+        self.moving_classes = [0, 2, 3, 5, 7]  # COCO классы (0: person, 2: car, 3: motorcycle, 5: bus, 7: truck)
+
+    def listener_callback(self, msg: Image):
+        try:
+
+            self.cv_image = self.br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+        except Exception as e:
+            self.get_logger().error(f'Failed to convert image message to OpenCV: {str(e)}')
+
+    def filter_moving_objects(self, image):
+        if image is None:
+            return None, None
+
+        current_image = image.copy()
+
+        results = self.model.predict(
+            current_image,
+            conf=0.5,  # Порог уверенности
+            classes=self.moving_classes,  # Фильтруем только движущиеся объекты
+            save=False,
+            verbose=False
+        )
+
+        # Создаем маску для исключения движущихся объектов
+        mask = np.ones_like(current_image, dtype=np.uint8) * 255  # Белая маска (все пиксели включены)
+        if results[0].masks is not None:
+            for mask_data in results[0].masks.data:
+                # Маска для одного объекта (бинарная, 0 или 1)
+                obj_mask = mask_data.cpu().numpy().astype(np.uint8) * 255
+                # Инвертируем маску: области объектов становятся черными (0)
+                mask[obj_mask == 255] = [0, 0, 0]
+
+        # Применяем маску к изображению: области движущихся объектов становятся черными
+        filtered_image = cv2.bitwise_and(current_image, mask)
+        debug_image = results[0].plot() if results else current_image.copy()
+
+        return filtered_image, debug_image
+
+    def timer_callback(self):
+        if self.cv_image is None:
+            return
+
+
+        filtered_image, debug_image = self.filter_moving_objects(self.cv_image)
+
+        if filtered_image is not None:
+            try:
+
+                filtered_msg = self.br.cv2_to_imgmsg(filtered_image, encoding='bgr8')
+                self.publisher_.publish(filtered_msg)
+                self.get_logger().info('Published filtered image')
+
+
+                debug_msg = self.br.cv2_to_imgmsg(debug_image, encoding='bgr8')
+                self.debug_publisher_.publish(debug_msg)
+                self.get_logger().info('Published debug segmented image')
+            except Exception as e:
+                self.get_logger().error(f'Failed to publish images: {str(e)}')
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SegmentationNode()
+    node = SegmentationFilterNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
