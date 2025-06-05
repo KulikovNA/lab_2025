@@ -358,12 +358,13 @@
     </visual>
   </link>
     
-  <joint name="camera_joint" type="fixed">
+  <joint name="camera_joint" type="continuous">
     <parent link="base_link"/>
     <child link="camera_link"/>
     <origin xyz="0.215 0.0 0.50" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
   </joint>
-    
+
   <gazebo reference="camera_link">
     <sensor name="camera" type="camera">
       <always_on>true</always_on>
@@ -390,10 +391,26 @@
       </plugin>
     </sensor>
   </gazebo>
+
   <gazebo reference="camera_link">
     <mu1>0.01</mu1>
     <mu2>0.01</mu2>
     <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <namespace>/two_wheeled_robot</namespace>
+        <remapping>joint_states:=joint_states</remapping>
+      </ros>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="joint_controller" filename="libgazebo_ros2_control.so">
+      <parameters>$(find two_wheeled_robot)/config/joint_controllers.yaml</parameters>
+    </plugin>
   </gazebo>
 
 

@@ -2,7 +2,7 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
-  set(install_space "/home/kulikov/lab_2024/src/two_wheeled_robot/install/two_wheeled_robot")
+  set(install_space "/workspace/lab_2025/src/two_wheeled_robot/install/two_wheeled_robot")
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -29,7 +29,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
-set(install_manifest "/home/kulikov/lab_2024/src/two_wheeled_robot/build/two_wheeled_robot/install_manifest.txt")
+set(install_manifest "/workspace/lab_2025/src/two_wheeled_robot/build/two_wheeled_robot/install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
