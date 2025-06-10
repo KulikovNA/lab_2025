@@ -19,8 +19,8 @@ def generate_launch_description():
   gazebo_models_path = 'models'
   package_name = 'two_wheeled_robot'
   robot_name_in_model = 'two_wheeled_robot'
-  rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
-  urdf_file_path = 'urdf/two_wheeled_robot_with_gazebo_plugins.urdf'
+  rviz_config_file_path = 'rviz/view.rviz'
+  urdf_file_path = 'urdf/youbot.urdf'
   world_file_path = 'worlds/cafe.world'
     
   # Pose where we want to spawn the robot
