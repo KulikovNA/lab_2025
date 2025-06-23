@@ -11,18 +11,32 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration, PythonExpression
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-
+from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
 
   # Constants for paths to different files and folders
   gazebo_models_path = 'models'
-  package_name = 'two_wheeled_robot'
-  robot_name_in_model = 'two_wheeled_robot'
+  # Имя пакета, который предоставляет URDF/XACRO для YouBot
+  # Это 'youbot_description', как и было.
+  package_name_robot = 'youbot_description' # <-- ИЗМЕНЕНО ИМЯ ПЕРЕМЕННОЙ
+  
+  # НОВОЕ: Имя пакета, который предоставляет World-файл
+  # Согласно вашей структуре, cafe.world находится в two_wheeled_robot.
+  package_name_world = 'two_wheeled_robot' # <-- ДОБАВЛЕНО
+  
+  # Имя робота, используемое при спауне в Gazebo
+  robot_name_in_model = 'youbot'
+  
+  # Путь к URDF/XACRO файлу YouBot внутри пакета youbot_description
+  urdf_file_path = 'urdf/youbot.urdf'
+  
+  # rviz_config_file_path
   rviz_config_file_path = 'rviz/urdf_gazebo_config.rviz'
-  urdf_file_path = 'urdf/two_wheeled_robot_with_gazebo_plugins.urdf'
-  world_file_path = 'worlds/cafe.world'
-    
+  
+  # world_file_path: Теперь связан с two_wheeled_robot
+  world_file_path = 'worlds/cafe.world' # Этот путь внутри two_wheeled_robot
+
   # Pose where we want to spawn the robot
   spawn_x_val = '0.0'
   spawn_y_val = '-10.0'
@@ -33,13 +47,18 @@ def generate_launch_description():
   
   # Set the path to different files and folders.  
   pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')   
-  pkg_share = FindPackageShare(package=package_name).find(package_name)
-  default_urdf_model_path = os.path.join(pkg_share, urdf_file_path)
-  default_rviz_config_path = os.path.join(pkg_share, rviz_config_file_path)
-  world_path = os.path.join(pkg_share, world_file_path)
-  gazebo_models_path = os.path.join(pkg_share, gazebo_models_path)
+  
+  # Пакет для URDF и RViz
+  pkg_share_robot = FindPackageShare(package=package_name_robot).find(package_name_robot) # <-- ИЗМЕНЕНО
+  default_urdf_model_path = os.path.join(pkg_share_robot, urdf_file_path) # <-- ИЗМЕНЕНО
+  default_rviz_config_path = os.path.join(pkg_share_robot, rviz_config_file_path) # <-- ИЗМЕНЕНО
+  gazebo_models_path = os.path.join(pkg_share_robot, gazebo_models_path) # Assuming models are with robot description
   os.environ["GAZEBO_MODEL_PATH"] = gazebo_models_path
   
+  # НОВОЕ: Пакет для world файла
+  pkg_share_world = FindPackageShare(package=package_name_world).find(package_name_world) # <-- ДОБАВЛЕНО
+  world_path = os.path.join(pkg_share_world, world_file_path) # <-- ИЗМЕНЕНО
+
   # Launch configuration variables specific to simulation
   gui = LaunchConfiguration('gui')
   headless = LaunchConfiguration('headless')
@@ -113,7 +132,7 @@ def generate_launch_description():
   start_robot_state_publisher_cmd = Node(
     package='robot_state_publisher',
     executable='robot_state_publisher',
-    parameters=[{'robot_description': Command(['xacro ', urdf_model])}])
+    parameters=[{'robot_description': ParameterValue(Command(['xacro ', urdf_model]), value_type=str)}])
 
   # Publish the joint states of the robot
   start_joint_state_publisher_cmd = Node(
@@ -130,16 +149,6 @@ def generate_launch_description():
     output='screen',
     arguments=['-d', rviz_config_file])
 
-  """# Start Gazebo server
-  start_gazebo_server_cmd = IncludeLaunchDescription(
-    PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')),
-    condition=IfCondition(use_simulator),
-    launch_arguments={'world': world}.items())
-
-  # Start Gazebo client    
-  start_gazebo_client_cmd = IncludeLaunchDescription(
-    PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')),
-    condition=IfCondition(PythonExpression([use_simulator, ' and not ', headless])))"""
   start_gazebo_server_cmd = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')),
     condition=IfCondition(use_simulator),

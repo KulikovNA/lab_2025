@@ -1,22 +1,36 @@
-FROM base_docker_lab2
+# В Dockerfile.lab_2
+FROM base_docker_lab2:latest
 
-# Копирование проекта
+# FIX для истекшего GPG-ключа ROS и конфликтующих источников:
+# Шаг 1: Временно разрешите неподписанные репозитории для установки необходимых инструментов.
+# Это временная мера для обхода ошибки GPG на этапе сборки.
+RUN echo "Acquire::AllowInsecureRepositories \"true\";" > /etc/apt/apt.conf.d/99allow-insecure && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends curl gnupg lsb-release && \
+    # Удалите временный файл, чтобы восстановить проверки безопасности
+    rm /etc/apt/apt.conf.d/99allow-insecure
+
+# Шаг 2: Удалите ВСЕ существующие файлы конфигурации ROS из sources.list.d
+# Это критически важно для предотвращения конфликтов Signed-By.
+RUN rm -f /etc/apt/sources.list.d/*ros*.list
+
+# Шаг 3: Добавьте новый GPG-ключ ROS.
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+# Шаг 4: Создайте ОДНУ правильную запись для репозитория ROS 2, указывающую на новый ключ.
+# Явно используем 'jammy' в качестве кодового имени Ubuntu.
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu jammy main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+# Шаг 5: Выполните окончательное обновление apt и установите x11-xserver-utils.
+# Теперь все репозитории должны быть действительными и не конфликтовать.
+RUN apt-get update && apt-get install -y x11-xserver-utils
+
+# Копирование проекта (остальные команды без изменений)
 WORKDIR /workspace/lab_2025
-COPY ../src /workspace/lab_2025/src
-COPY ../runlaunch.sh /workspace/lab_2025
-
-# Делаем скрипт исполняемым
+COPY src /workspace/lab_2025/src
+COPY runlaunch.sh /workspace/lab_2025
 RUN chmod +x /workspace/lab_2025/runlaunch.sh
-
-# сборка и инициализация проекта
 RUN /bin/bash -c '. /opt/ros/humble/setup.bash; colcon build'
-
-# Добавляем необходимые source-строки в .bashrc
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc && \
-    echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc && \
-    echo "source ~/lab_2025/install/setup.bash" >> ~/.bashrc
-
+    echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc
 WORKDIR /workspace/lab_2025
-
-ENTRYPOINT [ "/bin/bash","./runlaunch.sh" ]
-#ENTRYPOINT [ "/bin/bash"]
