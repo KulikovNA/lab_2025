@@ -18,10 +18,10 @@ def generate_launch_description():
   pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')   
   
   # Set the path to this package.
-  pkg_share = FindPackageShare(package='two_wheeled_robot').find('two_wheeled_robot')
+  pkg_share = FindPackageShare(package='two_wheeled_robot').find('two_wheeled_robot')S
 
   # Set the path to the world file
-  world_file_name = 'warehouse.world'
+  world_file_name = 'car.world'
   world_path = os.path.join(pkg_share, 'worlds', world_file_name)
   
   # Set the path to the SDF model files.
